@@ -6,11 +6,9 @@ var router = express.Router()
 
 router.post('/', function(req, res, next) {
   var token = req.body.access_token;
-    console.log('this is  no token and more token');
   
     let name;
     if(token){
-        console.log('this is a token and more token');
         try{
             var decoded = jwt.decode(token,req.app.get('jwtTokenSecret'));
             if(decoded.exp < Date.now()){
