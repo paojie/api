@@ -9,6 +9,8 @@ router.post('/', function(req, res, next) {
         passwd = req.body.passwd
 
 
+
+
     var user = new User()
     user.getUser({name}, function(error, item) {
         if(error) {
