@@ -8,6 +8,7 @@ router.post('/', function(req, res, next) {
     let name = req.body.name,
         passwd = req.body.passwd
 
+
     var user = new User()
     user.getUser({name}, function(error, item) {
         if(error) {
