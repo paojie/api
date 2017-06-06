@@ -4,8 +4,6 @@ var moment = require('moment');
 var User = require('../Models/users.js')
 var router = express.Router()
 
-
-
 router.post('/', function(req, res, next) {
     let name = req.body.name,
         passwd = req.body.passwd
